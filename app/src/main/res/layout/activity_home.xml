@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        />
+
+    <include
+        layout="@layout/home_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_option"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/footer_height"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <net.appitiza.android.lifedrop.Views.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/option_left_text_bg"
+                android:gravity="center"
+                android:padding="@dimen/default_semi_padding"
+                android:text="@string/search"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/helvatica"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/default_padding"
+                android:foregroundGravity="center"
+                app:backgroundTint="@android:color/white"
+                android:src="@drawable/search" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/default_padding"
+                android:foregroundGravity="center"
+                app:backgroundTint="@android:color/white"
+                android:src="@drawable/around" />
+
+            <net.appitiza.android.lifedrop.Views.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/option_right_text_bg"
+                android:fontFamily="@font/helvatica"
+                android:textStyle="normal"
+                android:gravity="center"
+                android:padding="@dimen/default_semi_padding"
+                android:text="@string/around"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

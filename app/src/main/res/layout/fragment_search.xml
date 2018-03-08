@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+    tools:context=".ui.activities.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/default_padding"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spnr_blood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding"
+            android:background="@drawable/et_bg"
+            android:hint="@string/last_donated"
+            android:padding="@dimen/default_semi_padding"
+            android:textColorHint="@color/et_hint_color" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding">
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:focusable="false"
+                android:hint="@string/address"
+                android:imeOptions="actionSend"
+                android:inputType="none"
+                android:padding="@dimen/default_semi_padding"
+                android:textColorHint="@color/et_hint_color" />
+        </android.support.design.widget.TextInputLayout>
+
+        <net.appitiza.android.lifedrop.Views.CustomTextview
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/default_padding"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:padding="@dimen/default_padding"
+            android:text="@string/search"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/helvatica"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_main_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/default_padding"
+            android:background="@color/offwhite"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

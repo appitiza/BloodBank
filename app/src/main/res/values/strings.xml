@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">Life Drop</string>
+    <string name="transition_update">transition_update</string>
+    <string name="unexpected_error">Unexpected Error</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="message_sent">Your Request Has been Sent</string>
+    <string name="profile_updated">Profile Has Been Updated</string>
+    <string name="details">Details</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">Ok</string>
+    <string name="network_alert">Network Alert</string>
+    <string name="unable_connect">Unable to connect</string>
+    <string name="exit">exit</string>
+    <string name="exit_message">Are you sure that you want to exit?</string>
+    <string name="name">Name</string>
+    <!-- Time -->
+    <string name="sec">sec</string>
+    <string name="min">min</string>
+    <string name="hr">hr</string>
+    <string name="day">day</string>
+    <string name="week">week</string>
+    <string name="month">month</string>
+    <string name="year">year</string>
+
+    <string name="secs">secs</string>
+    <string name="mins">mins</string>
+    <string name="hrs">hrs</string>
+    <string name="days">days</string>
+    <string name="weeks">weeks</string>
+    <string name="months">months</string>
+    <string name="years">years</string>
+
+    <string name="sec_ago">sec ago</string>
+    <string name="min_ago">min ago</string>
+    <string name="hr_ago">hr ago</string>
+    <string name="day_ago">day ago</string>
+    <string name="week_ago">week ago</string>
+    <string name="month_ago">month ago</string>
+    <string name="year_ago">year ago</string>
+
+    <string name="secs_ago">secs ago</string>
+    <string name="mins_ago">mins ago</string>
+    <string name="hrs_ago">hrs ago</string>
+    <string name="days_ago">days ago</string>
+    <string name="weeks_ago">weeks ago</string>
+    <string name="months_ago">months ago</string>
+    <string name="years_ago">years ago</string>
+
+
+    <string name="request">Request</string>
+    <string name="search">Search</string>
+    <string name="messages">Messages</string>
+    <string name="map">Around Me</string>
+    <string name="around">Around</string>
+    <string name="news">News</string>
+    <string name="set_location">Set Location</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="Password">Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="address">Address</string>
+    <string name="mobile">Mobile(+91XXXXXXXXXX)</string>
+    <string name="last_donated">Last Donated</string>
+    <string name="select_a_blood_type">"Select a Blood Type" </string>
+    <string name="required_date">Required Date</string>
+    <string name="medical_issue">Date of Birth</string>
+    <string name="register">Register</string>
+    <string name="update">Update</string>
+    <string name="reset">Reset</string>
+    <string name="email">Email Id</string>
+    <string name="or">Or</string>
+    <string name="login">Login</string>
+    <string name="forgot_passowrd">Forgot Password</string>
+    <string name="empty_field">Empty Field</string>
+    <string name="empty_firstname">Enter a First Name</string>
+    <string name="empty_lastname">Enter a Last Name</string>
+    <string name="empty_email">Enter Your Email ID</string>
+    <string name="empty_mobile">Enter Your Phone number</string>
+    <string name="error_verification_please_correct_after">We encountered an error in verifying your number.\nPlease correct in on completing the process</string>
+    <string name="empty_Password">Enter a Password</string>
+    <string name="old_Password">Enter Old Password</string>
+    <string name="empty_medical">Enter Your Date of Birth</string>
+    <string name="empty_address">Provide Your Address</string>
+    <string name="empty_agree_terms">Please accept terms and condition</string>
+    <string name="password_do_not_match">Password do not match</string>
+    <string name="empty_email_valid">Enter a Valid Email ID</string>
+    <string name="profile_terms">I accept \'Blood Bank\' terms and conditions of service and privacy policy.</string>
+    <string name="verification_code">Code</string>
+    <string name="resend">Resend</string>
+    <string name="verify">Verify</string>
+    <string name="verify_message">An SMS with code has been sent to %1$s .</string>
+    <string name="verify_invalid_code">Invalid Code</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_password">Change Password</string>
+    <string name="message">Message</string>
+    <string name="select_option">Select An Option</string>
+    <string name="select_future_date">Select a Future Date</string>
+    <string name="select_past_date">Select a Past Date</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="requires_by">Requires By</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share This App</string>
+    <string name="permission_location">READ and WRITE permission is required to continue using the application. Please go to Application settings and enable the required permission.</string>
+    <string name="copy_right">Copyright © 2017 by Appitiza\nAll Rights Reserved.</string>
+
+    <string name="launch_activity">Launch activity</string>
+    <string name="location_unknown">Location unknown</string>
+    <string name="location_updates_label">Location Updates</string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="done">Done</string>
+    <string name="request_location_updates">Request location updates</string>
+    <string name="remove_location_updates">Remove location updates</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+    <string name="permission_message_calendar">READ and WRITE permission is required to continue using the application. Please go to Application settings and enable the required permission.</string>
+    <string name="registering">Registering&#8230;</string>
+
+</resources>

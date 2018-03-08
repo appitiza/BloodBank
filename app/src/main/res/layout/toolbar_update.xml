@@ -1,0 +1,57 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:elevation="6dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name" />
+
+        <net.appitiza.android.lifedrop.Views.CustomTextview
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:layout_marginStart="@dimen/default_padding"
+            android:layout_toRightOf="@+id/iv_filter"
+            android:layout_toEndOf="@+id/iv_filter"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/helvatica"
+            android:layout_toLeftOf="@+id/tv_name"
+            android:layout_toStartOf="@+id/tv_name"/>
+        <net.appitiza.android.lifedrop.Views.CustomTextview
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/default_semi_padding"
+            android:layout_marginEnd="@dimen/default_semi_padding"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingRight="@dimen/default_padding"
+            android:paddingStart="@dimen/default_padding"
+            android:paddingLeft="@dimen/default_padding"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="@string/done"
+            android:fontFamily="@font/helvatica"/>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

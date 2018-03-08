@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/footer_height"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_bg">
+
+        <FrameLayout
+            android:id="@+id/fl_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="6"
+                android:baselineAligned="false"
+                android:layout_below="@+id/fl_line">
+
+                <LinearLayout
+                    android:id="@+id/ll_request"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/footer_item_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_semi_padding">
+
+                    <ImageView
+                        android:id="@+id/iv_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/request" />
+
+                    <net.appitiza.android.lifedrop.Views.CustomTextview
+                        android:id="@+id/tv_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/default_semi_padding"
+                        android:text="@string/request"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/helvatica"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_message"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/footer_item_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_semi_padding">
+
+                    <ImageView
+                        android:id="@+id/iv_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/envelope" />
+
+                    <net.appitiza.android.lifedrop.Views.CustomTextview
+                        android:id="@+id/tv_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/default_semi_padding"
+                        android:text="@string/message"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/helvatica"/>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2" />
+
+                <LinearLayout
+                    android:id="@+id/ll_news"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/footer_item_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_semi_padding">
+
+                    <ImageView
+                        android:id="@+id/iv_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/default_semi_padding"
+                        android:src="@drawable/news" />
+
+                    <net.appitiza.android.lifedrop.Views.CustomTextview
+                        android:id="@+id/tv_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/default_semi_padding"
+                        android:text="@string/news"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/helvatica"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/footer_item_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_semi_padding">
+
+                    <ImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/default_semi_padding"
+                        android:src="@drawable/profileinfo" />
+
+                    <net.appitiza.android.lifedrop.Views.CustomTextview
+                        android:id="@+id/tv_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/default_semi_padding"
+                        android:text="@string/profile"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/helvatica"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/fl_fab"
+        android:layout_width="@dimen/footer_height"
+        android:layout_height="@dimen/footer_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:elevation="6dp"
+            android:src="@drawable/blood"
+            app:backgroundTint="@android:color/white" />
+    </FrameLayout>
+
+</RelativeLayout>

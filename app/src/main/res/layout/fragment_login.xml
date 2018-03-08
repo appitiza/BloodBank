@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="@dimen/default_padding"
+    tools:context=".ui.activities.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+<ImageView
+    android:layout_width="@dimen/footer_height"
+    android:layout_height="@dimen/footer_height"
+    android:layout_gravity="center_horizontal"
+    android:src="@drawable/splash_bg"
+    android:contentDescription="@string/app_name" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/default_semi_padding"
+                android:maxLines="1"
+                android:textColorHint="@color/et_hint_color" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="@dimen/default_padding">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:hint="@string/Password"
+                android:inputType="textPassword"
+                android:padding="@dimen/default_semi_padding"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColorHint="@color/et_hint_color" />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <net.appitiza.android.lifedrop.Views.CustomTextview
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/default_padding"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:padding="@dimen/default_padding"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/helvatica"/>
+        <net.appitiza.android.lifedrop.Views.CustomTextview
+            android:id="@+id/tv_forgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/default_padding"
+            android:gravity="center"
+            android:padding="@dimen/default_padding"
+            android:text="@string/forgot_passowrd"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:fontFamily="@font/helvatica"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_semi_padding"
+            android:padding="@dimen/default_semi_padding">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_or"
+                android:background="@color/text_color" />
+
+            <net.appitiza.android.lifedrop.Views.CustomTextview
+                android:id="@+id/tv_or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/default_semi_padding"
+                android:text="@string/or"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:fontFamily="@font/monotype"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_or"
+                android:background="@color/text_color" />
+        </RelativeLayout>
+
+        <net.appitiza.android.lifedrop.Views.CustomTextview
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/default_semi_padding"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:padding="@dimen/default_padding"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/helvatica"/>
+    </LinearLayout>
+</ScrollView>

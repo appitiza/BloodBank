@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_semi_padding"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="1dp"
+    card_view:cardMaxElevation="2dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/default_semi_padding">
+
+        <ImageView
+            android:id="@+id/mIvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/man"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="@dimen/default_semi_padding">
+
+            <net.appitiza.android.lifedrop.Views.CustomTextview
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes"
+                android:textSize="@dimen/default_small_text_size"
+                android:textStyle="bold"
+                android:fontFamily="@font/helvatica"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_semi_padding"
+                android:orientation="vertical">
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/default_semi_padding"
+                    android:text="@string/yes"
+                    android:fontFamily="@font/helvatica"
+                    android:visibility="gone"/>
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/call"
+                    android:drawablePadding="@dimen/default_semi_padding"
+                    android:drawableStart="@drawable/call"
+                    android:padding="@dimen/default_semi_padding"
+                    android:text="@string/yes"
+                    android:fontFamily="@font/helvatica"/>
+            </LinearLayout>
+
+            <net.appitiza.android.lifedrop.Views.CustomTextview
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:fontFamily="@font/helvatica"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <net.appitiza.android.lifedrop.Views.CustomTextview
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:clickable="false"
+        android:gravity="left"
+        android:padding="@dimen/default_padding"
+        android:text="@string/verify_message"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        android:fontFamily="@font/helvatica"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/et_bg"
+            android:hint="@string/verification_code"
+            android:inputType="number"
+            android:padding="@dimen/default_padding"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+    </android.support.design.widget.TextInputLayout>
+
+    <net.appitiza.android.lifedrop.Views.CustomTextview
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_selector"
+        android:clickable="false"
+        android:gravity="center"
+        android:padding="@dimen/default_padding"
+        android:text="@string/verify"
+        android:textColor="@color/white"
+        android:fontFamily="@font/helvatica"/>
+
+    <net.appitiza.android.lifedrop.Views.CustomTextview
+        android:id="@+id/tv_resend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:clickable="false"
+        android:gravity="center"
+        android:padding="@dimen/default_padding"
+        android:text="@string/resend"
+        android:textColor="@color/link_color"
+        android:textStyle="bold"
+        android:fontFamily="@font/helvatica"/>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#a20309</color>
+    <color name="colorPrimaryDark">#a20309</color>
+    <color name="colorAccent">#a20309</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="toolbar_start">#F7FBFE</color>
+    <color name="toolbar_middle">#F4F8FB</color>
+    <color name="toolbar_end">#E1E4ED</color>
+    <color name="nav_select_bg">#CCa20309</color>
+
+    <color name="text_option">#8C0d9c57</color>
+    <color name="offwhite">#8Cd3d3d3</color>
+
+    <color name="et_hint_color">#575757</color>
+    <color name="et_border_color">#444D5D</color>
+    <color name="bg_color_white">#F9FDFF</color>
+    <color name="text_color">#444D5D</color>
+    <color name="link_color">#0645AD</color>
+    <color name="black">#000000</color>
+    <color name="tutorial_bg">#CCa20309</color>
+
+    <color name="footer_start">#FFFFFF</color>
+    <color name="footer_middle">#FFFFFF</color>
+    <color name="footer_end">#FFFFFF</color>
+</resources>

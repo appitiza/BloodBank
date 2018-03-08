@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "540786461965",
+    "firebase_url": "https://lifedrop-195914.firebaseio.com",
+    "project_id": "lifedrop-195914",
+    "storage_bucket": "lifedrop-195914.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540786461965:android:8e89f5fa469a06ba",
+        "android_client_info": {
+          "package_name": "net.appitiza.android.lifedrop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540786461965-mm3o61phmdeh8750cp7qf8dgjeaaqihq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.appitiza.android.lifedrop",
+            "certificate_hash": "40e11fb16d37b2640ef9e264dd3d46f57dd5f209"
+          }
+        },
+        {
+          "client_id": "540786461965-fk63kong1vcr3rgtl7uvot0hfnmfl59c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.appitiza.android.lifedrop",
+            "certificate_hash": "297f42869bcb9def27742921d991263e3ab5621e"
+          }
+        },
+        {
+          "client_id": "540786461965-4trnn84p2ii247t49fv91i3bpjnhr7ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtT3-Y6aaGGymX61McHJ-WwbduwdId5_Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540786461965-4trnn84p2ii247t49fv91i3bpjnhr7ju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

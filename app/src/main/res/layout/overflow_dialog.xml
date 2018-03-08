@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <net.appitiza.android.lifedrop.Views.CustomTextview
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:clickable="false"
+        android:gravity="left"
+        android:padding="@dimen/default_padding"
+        android:text="@string/select_option"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        android:fontFamily="@font/helvatica"/>
+    <net.appitiza.android.lifedrop.Views.CustomTextview
+        android:id="@+id/tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_selector"
+        android:clickable="false"
+        android:gravity="center"
+        android:padding="@dimen/default_padding"
+        android:text="@string/edit_password"
+        android:textColor="@color/white"
+        android:fontFamily="@font/helvatica"/>
+    <net.appitiza.android.lifedrop.Views.CustomTextview
+        android:id="@+id/tv_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_selector"
+        android:clickable="false"
+        android:gravity="center"
+        android:padding="@dimen/default_padding"
+        android:text="@string/edit_profile"
+        android:textColor="@color/white"
+        android:fontFamily="@font/helvatica"/>
+
+    <net.appitiza.android.lifedrop.Views.CustomTextview
+        android:id="@+id/tv_messages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_selector"
+        android:clickable="false"
+        android:gravity="center"
+        android:padding="@dimen/default_padding"
+        android:text="@string/message"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:fontFamily="@font/helvatica"/>
+
+
+</LinearLayout>
