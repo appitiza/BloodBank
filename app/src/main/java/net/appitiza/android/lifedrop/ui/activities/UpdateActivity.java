@@ -292,6 +292,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
     private void dismissVerifyDialog() {
         if (mDialogRespond != null && mDialogRespond.isShowing()) {
             mDialogRespond.dismiss();
+
         }
     }
 
