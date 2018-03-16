@@ -28,6 +28,7 @@ import java.lang.ref.WeakReference;
 public class SplashActivity extends BaseActivity implements WebserviceCallBack {
     private MyHandler mHandler  = new MyHandler(this);
     //private Runnable mRunnable;
+
     private int LOGIN = 1;
     private String fcm_token = "";
     private WeakReference<Context> mWeakActivity;
