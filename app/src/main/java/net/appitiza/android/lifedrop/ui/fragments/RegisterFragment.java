@@ -124,7 +124,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mWeakActivity = new WeakReference<Context>(context);
+        mWeakActivity = new WeakReference<>(context);
     }
 
     @Override
@@ -184,7 +184,6 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
             public void onVerificationCompleted(PhoneAuthCredential credential) {
                 Log.d("TAG", "onVerificationCompleted:" + credential);
                 signInWithPhoneAuthCredential(credential);
-
             }
 
             @Override
@@ -383,7 +382,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
             showAlert(getString(R.string.empty_field), getString(R.string.empty_agree_terms), RegisterFragment.this, mCbTerms);
         } else {
 
-            if (NetWorkUtil.isNetworkAvailable(getContext())) {
+            if (NetWorkUtil.isNetworkAvailable(mWeakActivity.get())) {
 
                 if (mPlace != null) {
 

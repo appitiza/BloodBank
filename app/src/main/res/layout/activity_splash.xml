@@ -6,10 +6,11 @@
     tools:context=".ui.activities.SplashActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:src="@drawable/splash_bg"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg"
         android:contentDescription="@string/app_name" />
 
     <ProgressBar
@@ -31,5 +32,6 @@
         android:text="@string/copy_right"
         android:gravity="center"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
         android:fontFamily="@font/monotype"/>
 </RelativeLayout>
