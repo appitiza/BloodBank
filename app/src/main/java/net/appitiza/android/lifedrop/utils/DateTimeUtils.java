@@ -15,7 +15,7 @@ import java.util.TimeZone;
 
 public class DateTimeUtils {
 
-    private static final String TAG = "DateTimeUtils";
+    private static final String TAG = "DateTimeUtilsClass";
 
     public static String dateDifferenceCalculation(String oldDatestring, Context mContext) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
