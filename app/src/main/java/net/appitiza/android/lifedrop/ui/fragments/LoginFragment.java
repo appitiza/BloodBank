@@ -115,11 +115,11 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener,
 
     private void validate() {
         if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
-            showAlert("Field Empty", "Enter a valid email",LoginFragment.this,mEtEmail);
+            showAlert(getString(R.string.app_name), "Enter a valid email",LoginFragment.this,mEtEmail);
         } else if (!GeneralUtils.isValidEmail(mEtEmail.getText().toString().trim())) {
-            showAlert("Field Empty", "Enter a valid email");
+            showAlert(getString(R.string.app_name), "Enter a valid email");
         } else if (TextUtils.isEmpty(mEtPassword.getText().toString().trim())) {
-            showAlert("Field Empty", "Enter a password",LoginFragment.this,mEtPassword);
+            showAlert(getString(R.string.app_name), "Enter a password",LoginFragment.this,mEtPassword);
         } else {
 
             if (NetWorkUtil.isNetworkAvailable(getContext())) {

@@ -99,19 +99,19 @@ public class UpdatePasswordActivity extends BaseActivity implements View.OnClick
         if (TextUtils.isEmpty(mEtOldPassword.getText().toString().trim())) {
             mEtOldPassword.setBackgroundResource(R.drawable.border_et_empty);
             mEtOldPassword.startAnimation(animShake);
-            showAlert(getString(R.string.empty_field), getString(R.string.old_Password));
+            showAlert(getString(R.string.app_name), getString(R.string.old_Password));
         } else if (TextUtils.isEmpty(mEtPassword.getText().toString().trim())) {
             mEtPassword.setBackgroundResource(R.drawable.border_et_empty);
             mEtPassword.startAnimation(animShake);
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_Password));
+            showAlert(getString(R.string.app_name), getString(R.string.empty_Password));
         } else if (TextUtils.isEmpty(mEtConfirmPassword.getText().toString().trim())) {
             mEtConfirmPassword.setBackgroundResource(R.drawable.border_et_empty);
             mEtConfirmPassword.startAnimation(animShake);
-            showAlert(getString(R.string.empty_field), getString(R.string.confirm_password));
+            showAlert(getString(R.string.app_name), getString(R.string.confirm_password));
         } else if (!mEtConfirmPassword.getText().toString().trim().equals(mEtPassword.getText().toString().trim())) {
             mEtConfirmPassword.setBackgroundResource(R.drawable.border_et_empty);
             mEtPassword.setBackgroundResource(R.drawable.border_et_empty);
-            showAlert(getString(R.string.empty_field), getString(R.string.password_do_not_match));
+            showAlert(getString(R.string.app_name), getString(R.string.password_do_not_match));
             mEtPassword.startAnimation(animShake);
             mEtConfirmPassword.startAnimation(animShake);
         } else {

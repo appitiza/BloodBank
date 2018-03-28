@@ -189,11 +189,11 @@ public class RequestFragment extends BaseFragment implements View.OnClickListene
          if (TextUtils.isEmpty(mEtMessage.getText().toString().trim())) {
             mEtMessage.setBackgroundResource(R.drawable.border_et_empty);
         //    mEtMessage.startAnimation(animShake);
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_mobile));
+            showAlert(getString(R.string.app_name), getString(R.string.empty_mobile));
         } else if (TextUtils.isEmpty(mEtAddress.getText().toString().trim())) {
             mEtAddress.setBackgroundResource(R.drawable.border_et_empty);
          //   mEtAddress.startAnimation(animShake);
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_address));
+            showAlert(getString(R.string.app_name), getString(R.string.empty_address));
         } else {
 
             if (NetWorkUtil.isNetworkAvailable(getContext())) {

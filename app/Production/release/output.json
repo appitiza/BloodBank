@@ -1,1 +1,1 @@
-[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"app-Production-release.apk","properties":{"packageId":"net.appitiza.android.lifedrop","split":"","minSdkVersion":"16"}}]
+[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0","enabled":true,"outputFile":"app-Production-release.apk","fullName":"ProductionRelease","baseName":"Production-release"},"path":"app-Production-release.apk","properties":{}}]

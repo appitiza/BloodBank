@@ -126,5 +126,8 @@
     <string name="location_updated">Location Updated: %1$s</string>
     <string name="permission_message_calendar">READ and WRITE permission is required to continue using the application. Please go to Application settings and enable the required permission.</string>
     <string name="registering">Registering&#8230;</string>
+    <string name="empty_email_header">Email ID Missing</string>
+    <string name="invalid_email_header">Invalid Email ID</string>
+    <string name="empty_password">Password Missing</string>
 
 </resources>

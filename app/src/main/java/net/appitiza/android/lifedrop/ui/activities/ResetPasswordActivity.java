@@ -150,15 +150,15 @@ public class ResetPasswordActivity extends BaseActivity implements View.OnClickL
     private void register() {
         Log.d("TAG", "register called");
         if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_email), ResetPasswordActivity.this, mEtEmail);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_email), ResetPasswordActivity.this, mEtEmail);
         } else if (TextUtils.isEmpty(mEtDOB.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_medical), ResetPasswordActivity.this, mEtDOB);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_medical), ResetPasswordActivity.this, mEtDOB);
         } else if (TextUtils.isEmpty(mEtPassword.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_Password), ResetPasswordActivity.this, mEtPassword);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_Password), ResetPasswordActivity.this, mEtPassword);
         } else if (TextUtils.isEmpty(mEtConfirmPassword.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.confirm_password), ResetPasswordActivity.this, mEtConfirmPassword);
+            showAlert(getString(R.string.app_name), getString(R.string.confirm_password), ResetPasswordActivity.this, mEtConfirmPassword);
         } else if (!mEtConfirmPassword.getText().toString().trim().equals(mEtPassword.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.password_do_not_match), ResetPasswordActivity.this, mEtConfirmPassword);
+            showAlert(getString(R.string.app_name), getString(R.string.password_do_not_match), ResetPasswordActivity.this, mEtConfirmPassword);
         } else {
 
             if (NetWorkUtil.isNetworkAvailable(ResetPasswordActivity.this)) {

@@ -178,9 +178,9 @@ public class SearchFragment extends BaseFragment implements View.OnClickListener
 
 
         if (TextUtils.isEmpty(blood.trim()) || blood.trim().equalsIgnoreCase(getString(R.string.select_a_blood_type))) {
-            showAlert(getString(R.string.empty_field), getString(R.string.select_a_blood_type), SearchFragment.this, mSpnrBlood);
+            showAlert(getString(R.string.app_name), getString(R.string.select_a_blood_type), SearchFragment.this, mSpnrBlood);
         } else if (TextUtils.isEmpty(mEtAddress.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_address), SearchFragment.this, mEtAddress);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_address), SearchFragment.this, mEtAddress);
         } else {
             if (mPlace != null) {
                 if (NetWorkUtil.isNetworkAvailable(getContext())) {

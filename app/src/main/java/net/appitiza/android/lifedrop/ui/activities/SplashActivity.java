@@ -1,5 +1,6 @@
 package net.appitiza.android.lifedrop.ui.activities;
 
+import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
@@ -26,35 +27,34 @@ import net.appitiza.android.lifedrop.webservices.WebserviceHandler;
 import java.lang.ref.WeakReference;
 
 public class SplashActivity extends BaseActivity implements WebserviceCallBack {
-    private MyHandler mHandler  = new MyHandler(this);
-    //private Runnable mRunnable;
+    private Handler mHandler;
+    private DelayRunnable mRunnable;
 
     private int LOGIN = 1;
     private String fcm_token = "";
     private WeakReference<Context> mWeakActivity;
 
-    private static class MyHandler extends Handler {
-        private final WeakReference<SplashActivity> mActivity;
 
-        private MyHandler(SplashActivity activity) {
-            mActivity = new WeakReference<SplashActivity>(activity);
-        }
+   private static class DelayRunnable implements Runnable {
 
-        @Override
-        public void handleMessage(Message msg) {
+       WeakReference<SplashActivity> mWeak;
+       private DelayRunnable(SplashActivity activity){
+           mWeak = new WeakReference<>(activity);
+       }
+       @Override
+       public void run() {
+           mWeak.get().moveToNextActivityWithFade(true, StartupActivity.class, null);
+       }
+   }
 
-        }
-    }
-    private  final Runnable mRunnable = new Runnable() {
-        @Override
-        public void run() {moveToNextActivityWithFade(true, StartupActivity.class, null);}
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         mWeakActivity = new WeakReference<Context>(SplashActivity.this);
         findViewById(R.id.progress).setVisibility(View.INVISIBLE);
+        mHandler  = new Handler();
+        mRunnable = new DelayRunnable(this);
         autoLogin();
 
     }
@@ -104,6 +104,7 @@ public class SplashActivity extends BaseActivity implements WebserviceCallBack {
                 moveToNextActivityWithFade(true, StartupActivity.class, null);
             }
         };*/
+
         mHandler.postDelayed(mRunnable, 4000);
     }
 

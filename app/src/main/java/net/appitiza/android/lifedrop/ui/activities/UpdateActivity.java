@@ -326,17 +326,17 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
     private void verifyNumber() {
         clearValidation();
         if (TextUtils.isEmpty(mEtFirstName.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_firstname), UpdateActivity.this, mEtFirstName, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), UpdateActivity.this, mEtFirstName, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtLastName.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_lastname), UpdateActivity.this, mEtLastName, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_lastname), UpdateActivity.this, mEtLastName, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_email), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_email), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
         } else if (!GeneralUtils.isValidEmail(mEtEmail.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_email_valid), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_email_valid), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtMobile.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_mobile), UpdateActivity.this, mEtMobile, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_mobile), UpdateActivity.this, mEtMobile, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtAddress.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_address), UpdateActivity.this, mEtAddress, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_address), UpdateActivity.this, mEtAddress, Constants.VALIDATION_DIALOG_ID);
         } else {
 
             if (NetWorkUtil.isNetworkAvailable(UpdateActivity.this)) {
@@ -352,7 +352,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
                     startPhoneNumberVerification(mEtMobile.getText().toString().trim());
 
                 } else {
-                    showAlert(getString(R.string.empty_field), getString(R.string.empty_address));
+                    showAlert(getString(R.string.app_name), getString(R.string.empty_address));
                 }
             } else {
                 showNetworkAlert();
@@ -391,19 +391,19 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
         Log.d("TAG", "register called");
         clearValidation();
         if (TextUtils.isEmpty(mEtFirstName.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_firstname), UpdateActivity.this, mEtFirstName, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), UpdateActivity.this, mEtFirstName, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtLastName.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_lastname), UpdateActivity.this, mEtLastName, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_lastname), UpdateActivity.this, mEtLastName, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_email), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_email), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
         } else if (!GeneralUtils.isValidEmail(mEtEmail.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_email_valid), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_email_valid), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtMobile.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_mobile), UpdateActivity.this, mEtMobile, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_mobile), UpdateActivity.this, mEtMobile, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtDOB.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_medical), UpdateActivity.this, mEtDOB, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_medical), UpdateActivity.this, mEtDOB, Constants.VALIDATION_DIALOG_ID);
         } else if (TextUtils.isEmpty(mEtAddress.getText().toString().trim())) {
-            showAlert(getString(R.string.empty_field), getString(R.string.empty_address), UpdateActivity.this, mEtAddress, Constants.VALIDATION_DIALOG_ID);
+            showAlert(getString(R.string.app_name), getString(R.string.empty_address), UpdateActivity.this, mEtAddress, Constants.VALIDATION_DIALOG_ID);
         } else {
 
             if (NetWorkUtil.isNetworkAvailable(UpdateActivity.this)) {
@@ -425,7 +425,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
 
                         }
                     } else {
-                        showAlert(getString(R.string.empty_field), getString(R.string.empty_mobile));
+                        showAlert(getString(R.string.app_name), getString(R.string.empty_mobile));
                     }
                 }
             } else {
