@@ -26,4 +26,7 @@
     <color name="footer_start">#FFFFFF</color>
     <color name="footer_middle">#FFFFFF</color>
     <color name="footer_end">#FFFFFF</color>
+    <color name="common_bg_start">#d6d6d6</color>
+    <color name="common_bg_end">#fefefe</color>
+
 </resources>

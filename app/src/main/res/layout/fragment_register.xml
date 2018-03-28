@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/common_bg"
     android:orientation="vertical"
     android:padding="@dimen/default_padding"
     tools:context=".ui.activities.SplashActivity">
