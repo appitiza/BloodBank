@@ -34,6 +34,7 @@
                 android:inputType="textEmailAddress"
                 android:padding="@dimen/default_semi_padding"
                 android:maxLines="1"
+                android:longClickable="false"
                 android:textColorHint="@color/et_hint_color" />
         </android.support.design.widget.TextInputLayout>
 
@@ -51,7 +52,8 @@
                 android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:padding="@dimen/default_semi_padding"
-                android:maxLength="10"
+                android:maxLength="30"
+                android:longClickable="false"
                 android:maxLines="1"
                 android:textColorHint="@color/et_hint_color" />
         </android.support.design.widget.TextInputLayout>

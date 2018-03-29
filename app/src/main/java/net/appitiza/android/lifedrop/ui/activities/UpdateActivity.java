@@ -65,8 +65,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
     private CustomTextview mTvTitle;
     private CustomTextview mTvDone;
 
-    private EditText mEtFirstName;
-    private EditText mEtLastName;
+    private EditText mEtFullName;
     private EditText mEtMobile;
     private EditText mEtEmail;
     private RadioButton mRbMale;
@@ -120,8 +119,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
 
 
         final Calendar calendar = Calendar.getInstance();
-        mEtFirstName = findViewById(R.id.et_firstname);
-        mEtLastName = findViewById(R.id.et_lastname);
+        mEtFullName = findViewById(R.id.et_fullname);
         mEtMobile = findViewById(R.id.et_mobile);
         mEtEmail = findViewById(R.id.et_email);
         mRbMale = findViewById(R.id.rb_male);
@@ -143,9 +141,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
         mTvDone.setOnClickListener(this);
         if (Bloodbank.getSignInData() != null) {
 
-            mEtFirstName.setText(Bloodbank.getSignInData().getFirstName());
-            mEtFirstName.setSelection(mEtFirstName.getText().length());
-            mEtLastName.setText(Bloodbank.getSignInData().getLastName());
+            mEtFullName.setSelection(mEtFullName.getText().length());
             mEtMobile.setText(Bloodbank.getSignInData().getNumber());
             mEtEmail.setText(Bloodbank.getSignInData().getEmail());
 
@@ -325,11 +321,9 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
 
     private void verifyNumber() {
         clearValidation();
-        if (TextUtils.isEmpty(mEtFirstName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), UpdateActivity.this, mEtFirstName, Constants.VALIDATION_DIALOG_ID);
-        } else if (TextUtils.isEmpty(mEtLastName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_lastname), UpdateActivity.this, mEtLastName, Constants.VALIDATION_DIALOG_ID);
-        } else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
+        if (TextUtils.isEmpty(mEtFullName.getText().toString().trim())) {
+            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), UpdateActivity.this, mEtFullName, Constants.VALIDATION_DIALOG_ID);
+        }  else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
         } else if (!GeneralUtils.isValidEmail(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email_valid), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
@@ -390,11 +384,9 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
     private void register() {
         Log.d("TAG", "register called");
         clearValidation();
-        if (TextUtils.isEmpty(mEtFirstName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), UpdateActivity.this, mEtFirstName, Constants.VALIDATION_DIALOG_ID);
-        } else if (TextUtils.isEmpty(mEtLastName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_lastname), UpdateActivity.this, mEtLastName, Constants.VALIDATION_DIALOG_ID);
-        } else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
+        if (TextUtils.isEmpty(mEtFullName.getText().toString().trim())) {
+            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), UpdateActivity.this, mEtFullName, Constants.VALIDATION_DIALOG_ID);
+        }  else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
         } else if (!GeneralUtils.isValidEmail(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email_valid), UpdateActivity.this, mEtEmail, Constants.VALIDATION_DIALOG_ID);
@@ -421,7 +413,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
                     if (!TextUtils.isEmpty(phoneNumber)) {
                         if (Bloodbank.getSignInData() != null) {
                             blood = Bloodbank.getSignInData().getBlood();
-                            WebserviceHandler.updateProfile(fcm_token, Bloodbank.getSignInData().getEmail(), mEtFirstName.getText().toString().trim(), mEtLastName.getText().toString().trim(), password, phoneNumber, latitude, longitude, address, gender, blood, mEtDOB.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), UpdateActivity.this, UPDATION);
+                            WebserviceHandler.updateProfile(fcm_token, Bloodbank.getSignInData().getEmail(), mEtFullName.getText().toString().trim(), "", password, phoneNumber, latitude, longitude, address, gender, blood, mEtDOB.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), UpdateActivity.this, UPDATION);
 
                         }
                     } else {
@@ -436,8 +428,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void clearValidation() {
-        mEtFirstName.setBackgroundResource(R.drawable.et_bg);
-        mEtLastName.setBackgroundResource(R.drawable.et_bg);
+        mEtFullName.setBackgroundResource(R.drawable.et_bg);
         mEtEmail.setBackgroundResource(R.drawable.et_bg);
         mEtMobile.setBackgroundResource(R.drawable.et_bg);
         mEtAddress.setBackgroundResource(R.drawable.et_bg);

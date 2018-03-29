@@ -61,6 +61,7 @@
     <string name="female">Female</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
+    <string name="full_name">Full Name</string>
     <string name="Password">Password</string>
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
@@ -79,9 +80,10 @@
     <string name="login">Login</string>
     <string name="forgot_passowrd">Forgot Password</string>
     <string name="empty_field">Empty Field</string>
-    <string name="empty_firstname">Enter a First Name</string>
+    <string name="empty_firstname">Enter a Name</string>
     <string name="empty_lastname">Enter a Last Name</string>
     <string name="empty_email">Enter Your Email ID</string>
+    <string name="empty_message">Enter Message</string>
     <string name="empty_mobile">Enter Your Phone number</string>
     <string name="error_verification_please_correct_after">We encountered an error in verifying your number.\nPlease correct in on completing the process</string>
     <string name="empty_Password">Enter a Password</string>

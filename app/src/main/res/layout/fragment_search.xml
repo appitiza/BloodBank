@@ -12,16 +12,22 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/default_padding"
         android:orientation="vertical">
-
-        <Spinner
-            android:id="@+id/spnr_blood"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_padding"
-            android:background="@drawable/et_bg"
-            android:hint="@string/last_donated"
-            android:padding="@dimen/default_semi_padding"
-            android:textColorHint="@color/et_hint_color" />
+            android:background="@drawable/spinner_bg">
+
+
+            <Spinner
+                android:id="@+id/spnr_blood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/last_donated"
+                android:padding="@dimen/default_semi_padding"
+                android:textColorHint="@color/et_hint_color" />
+
+        </RelativeLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

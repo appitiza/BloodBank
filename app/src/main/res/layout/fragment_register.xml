@@ -8,15 +8,6 @@
     android:padding="@dimen/default_padding"
     tools:context=".ui.activities.SplashActivity">
 
-    <net.appitiza.android.lifedrop.Views.CustomTextview
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:padding="@dimen/default_semi_padding"
-        android:text="@string/register"
-        android:textColor="@color/text_color"
-        android:fontFamily="@font/helvatica"
-        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,37 +28,19 @@
                 android:layout_marginTop="@dimen/default_padding">
 
                 <EditText
-                    android:id="@+id/et_firstname"
+                    android:id="@+id/et_fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/default_padding"
                     android:background="@drawable/et_bg"
-                    android:hint="@string/first_name"
+                    android:hint="@string/full_name"
                     android:inputType="textCapWords"
-                    android:maxLength="15"
+                    android:maxLength="50"
                     android:maxLines="1"
                     android:padding="@dimen/default_semi_padding"
                     android:textColorHint="@color/et_hint_color" />
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/default_padding"
-                android:visibility="gone">
-
-                <EditText
-                    android:id="@+id/et_lastname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/et_bg"
-                    android:hint="@string/last_name"
-                    android:inputType="textPersonName"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:padding="@dimen/default_semi_padding"
-                    android:textColorHint="@color/et_hint_color" />
-            </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -145,10 +118,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_padding"
+                android:fontFamily="@font/helvatica"
                 android:padding="@dimen/default_semi_padding"
                 android:text="@string/gender"
-                android:textColor="@color/text_color"
-                android:fontFamily="@font/helvatica"/>
+                android:textColor="@color/text_color" />
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -171,15 +144,22 @@
                     android:textColor="@color/text_color" />
             </RadioGroup>
 
-            <Spinner
-                android:id="@+id/spnr_blood"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_padding"
-                android:background="@drawable/et_bg"
-                android:hint="@string/last_donated"
-                android:padding="@dimen/default_semi_padding"
-                android:textColorHint="@color/et_hint_color" />
+                android:background="@drawable/spinner_bg">
+
+
+                <Spinner
+                    android:id="@+id/spnr_blood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_donated"
+                    android:padding="@dimen/default_semi_padding"
+                    android:textColorHint="@color/et_hint_color" />
+
+            </RelativeLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -215,6 +195,7 @@
                     android:hint="@string/medical_issue"
                     android:imeOptions="actionSend"
                     android:inputType="none"
+                    android:longClickable="false"
                     android:maxLines="1"
                     android:padding="@dimen/default_semi_padding"
                     android:textColorHint="@color/et_hint_color" />
@@ -234,6 +215,7 @@
                     android:hint="@string/address"
                     android:imeOptions="actionSend"
                     android:inputType="none"
+                    android:longClickable="false"
                     android:padding="@dimen/default_semi_padding"
                     android:textColorHint="@color/et_hint_color" />
             </android.support.design.widget.TextInputLayout>
@@ -255,8 +237,8 @@
                     android:id="@+id/tv_cb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/profile_terms"
-                    android:fontFamily="@font/monotype"/>
+                    android:fontFamily="@font/monotype"
+                    android:text="@string/profile_terms" />
             </LinearLayout>
 
             <net.appitiza.android.lifedrop.Views.CustomTextview
@@ -266,58 +248,13 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/default_semi_padding"
                 android:background="@drawable/button_selector"
+                android:fontFamily="@font/helvatica"
                 android:gravity="center"
                 android:padding="@dimen/default_padding"
                 android:text="@string/register"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:fontFamily="@font/helvatica"/>
+                android:textStyle="bold" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/default_semi_padding"
-                android:padding="@dimen/default_semi_padding">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/tv_or"
-                    android:background="@color/text_color" />
-
-                <net.appitiza.android.lifedrop.Views.CustomTextview
-                    android:id="@+id/tv_or"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:padding="@dimen/default_semi_padding"
-                    android:text="@string/or"
-                    android:textColor="@color/text_color"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/helvatica"/>
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/tv_or"
-                    android:background="@color/text_color" />
-            </RelativeLayout>
-
-            <net.appitiza.android.lifedrop.Views.CustomTextview
-                android:id="@+id/tv_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/default_semi_padding"
-                android:background="@drawable/button_selector"
-                android:gravity="center"
-                android:padding="@dimen/default_padding"
-                android:text="@string/login"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:fontFamily="@font/helvatica"/>
         </LinearLayout>
 
     </ScrollView>

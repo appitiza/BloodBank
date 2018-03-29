@@ -74,9 +74,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
 
     private WeakReference<Context> mWeakActivity;
     private CustomTextview mTvRegister;
-    private CustomTextview mTvLogin;
-    private EditText mEtFirstName;
-    private EditText mEtLastName;
+    private EditText mEtFullName;
     private EditText mEtMobile;
     private EditText mEtEmail;
     private EditText mEtPassword;
@@ -147,9 +145,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
         blood_list.add("O-");
 
         mTvRegister = v.findViewById(R.id.tv_register);
-        mTvLogin = v.findViewById(R.id.tv_login);
-        mEtFirstName = v.findViewById(R.id.et_firstname);
-        mEtLastName = v.findViewById(R.id.et_lastname);
+        mEtFullName = v.findViewById(R.id.et_fullname);
         mEtMobile = v.findViewById(R.id.et_mobile);
         mEtEmail = v.findViewById(R.id.et_email);
         mEtPassword = v.findViewById(R.id.et_password);
@@ -168,7 +164,6 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
         mSpnrBlood.setAdapter(bloodgroups);
         mSpnrBlood.setOnItemSelectedListener(this);
         mTvRegister.setOnClickListener(this);
-        mTvLogin.setOnClickListener(this);
         mTvTerms.setOnClickListener(this);
         mEtLastDonated.setOnClickListener(this);
         mEtMedical.setOnClickListener(this);
@@ -331,9 +326,6 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
             case R.id.tv_register:
                 verifyNumber();
                 break;
-            case R.id.tv_login:
-                ((StartupAction) mWeakActivity.get()).login();
-                break;
             case R.id.et_last_donation:
                 datetype = 1;
                 showDateSelector();
@@ -356,11 +348,9 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
 
     private void verifyNumber() {
         clearValidation();
-        if (TextUtils.isEmpty(mEtFirstName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), RegisterFragment.this, mEtFirstName);
-        } /*else if (TextUtils.isEmpty(mEtLastName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_lastname), RegisterFragment.this, mEtLastName);
-        }*/ else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
+        if (TextUtils.isEmpty(mEtFullName.getText().toString().trim())) {
+            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), RegisterFragment.this, mEtFullName);
+        } else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email), RegisterFragment.this, mEtEmail);
         } else if (!GeneralUtils.isValidEmail(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email_valid), RegisterFragment.this, mEtEmail);
@@ -431,8 +421,8 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
     private void register() {
         Log.d("TAG", "register called");
         clearValidation();
-        if (TextUtils.isEmpty(mEtFirstName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), RegisterFragment.this, mEtFirstName);
+        if (TextUtils.isEmpty(mEtFullName.getText().toString().trim())) {
+            showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), RegisterFragment.this, mEtFullName);
         } /*else if (TextUtils.isEmpty(mEtLastName.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_lastname), RegisterFragment.this, mEtLastName);
         }*/ else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
@@ -471,7 +461,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
                         fcm_token = "";
                     }
                     if (!TextUtils.isEmpty(phoneNumber)) {
-                        WebserviceHandler.signUp(fcm_token, mEtEmail.getText().toString().trim(), mEtFirstName.getText().toString().trim(), mEtLastName.getText().toString().trim(), mEtPassword.getText().toString().trim(), phoneNumber, latitude, longitude, address, gender, blood, mEtMedical.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), RegisterFragment.this, REGISTRATION);
+                        WebserviceHandler.signUp(fcm_token, mEtEmail.getText().toString().trim(), mEtFullName.getText().toString().trim(), "", mEtPassword.getText().toString().trim(), phoneNumber, latitude, longitude, address, gender, blood, mEtMedical.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), RegisterFragment.this, REGISTRATION);
                     } else {
                         showAlert(getString(R.string.app_name), getString(R.string.empty_mobile));
                     }
@@ -484,8 +474,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
     }
 
     private void clearValidation() {
-        mEtFirstName.setBackgroundResource(R.drawable.et_bg);
-        mEtLastName.setBackgroundResource(R.drawable.et_bg);
+        mEtFullName.setBackgroundResource(R.drawable.et_bg);
         mEtEmail.setBackgroundResource(R.drawable.et_bg);
         mEtMobile.setBackgroundResource(R.drawable.et_bg);
         mEtPassword.setBackgroundResource(R.drawable.et_bg);

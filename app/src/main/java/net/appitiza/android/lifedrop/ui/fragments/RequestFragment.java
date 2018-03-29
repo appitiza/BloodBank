@@ -187,11 +187,9 @@ public class RequestFragment extends BaseFragment implements View.OnClickListene
     private void request() {
         clearValidation();
          if (TextUtils.isEmpty(mEtMessage.getText().toString().trim())) {
-            mEtMessage.setBackgroundResource(R.drawable.border_et_empty);
         //    mEtMessage.startAnimation(animShake);
-            showAlert(getString(R.string.app_name), getString(R.string.empty_mobile));
+            showAlert(getString(R.string.app_name), getString(R.string.empty_message));
         } else if (TextUtils.isEmpty(mEtAddress.getText().toString().trim())) {
-            mEtAddress.setBackgroundResource(R.drawable.border_et_empty);
          //   mEtAddress.startAnimation(animShake);
             showAlert(getString(R.string.app_name), getString(R.string.empty_address));
         } else {
@@ -226,7 +224,7 @@ public class RequestFragment extends BaseFragment implements View.OnClickListene
     private void startLocationIntent() {
         try {
             Intent intent = new PlaceAutocomplete.IntentBuilder
-                    (PlaceAutocomplete.MODE_OVERLAY)
+                    (PlaceAutocomplete.MODE_FULLSCREEN)
                     .build(getActivity());
             startActivityForResult(intent, PLACE_AUTOCOMPLETE_REQUEST_CODE);
         } catch (GooglePlayServicesRepairableException |
