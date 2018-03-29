@@ -1,15 +1,9 @@
 package net.appitiza.android.lifedrop.ui.activities;
 
-import android.app.Activity;
-import android.app.ActivityOptions;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ProgressBar;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -29,31 +23,28 @@ import java.lang.ref.WeakReference;
 public class SplashActivity extends BaseActivity implements WebserviceCallBack {
     private Handler mHandler;
     private DelayRunnable mRunnable;
-
     private int LOGIN = 1;
     private String fcm_token = "";
-    private WeakReference<Context> mWeakActivity;
+    private static class DelayRunnable implements Runnable {
 
+        WeakReference<SplashActivity> mWeak;
 
-   private static class DelayRunnable implements Runnable {
+        private DelayRunnable(SplashActivity activity) {
+            mWeak = new WeakReference<>(activity);
+        }
 
-       WeakReference<SplashActivity> mWeak;
-       private DelayRunnable(SplashActivity activity){
-           mWeak = new WeakReference<>(activity);
-       }
-       @Override
-       public void run() {
-           mWeak.get().moveToNextActivityWithFade(true, StartupActivity.class, null);
-       }
-   }
+        @Override
+        public void run() {
+            mWeak.get().moveToNextActivityWithFade(true, StartupActivity.class, null);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        mWeakActivity = new WeakReference<Context>(SplashActivity.this);
         findViewById(R.id.progress).setVisibility(View.INVISIBLE);
-        mHandler  = new Handler();
+        mHandler = new Handler();
         mRunnable = new DelayRunnable(this);
         autoLogin();
 
@@ -61,7 +52,7 @@ public class SplashActivity extends BaseActivity implements WebserviceCallBack {
 
     private void autoLogin() {
         fcm_token = FirebaseInstanceId.getInstance().getToken();
-        Bloodbank.setSignInData((SignInModel) CacheUtility.readCache(mWeakActivity.get(), CacheConstants.PROFILE));
+        Bloodbank.setSignInData((SignInModel) CacheUtility.readCache(getApplicationContext(), CacheConstants.PROFILE));
         if (Bloodbank.getSignInData() != null && Bloodbank.getSignInData().getEmail() != null && Bloodbank.getSignInData().getPassword() != null) {
             String email = Bloodbank.getSignInData().getEmail();
             String password = Bloodbank.getSignInData().getPassword();
@@ -79,13 +70,12 @@ public class SplashActivity extends BaseActivity implements WebserviceCallBack {
 
     private void validate(String email, String password) {
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
-            if (NetWorkUtil.isNetworkAvailable(mWeakActivity.get())) {
+            if (NetWorkUtil.isNetworkAvailable(getApplicationContext())) {
                 findViewById(R.id.progress).setVisibility(View.VISIBLE);
-                if(fcm_token == null)
-                {
+                if (fcm_token == null) {
                     fcm_token = "";
                 }
-                WebserviceHandler.signIn(fcm_token, email, password, (WebserviceCallBack) mWeakActivity.get(), LOGIN);
+                WebserviceHandler.signIn(fcm_token, email, password, this, LOGIN);
             } else {
                 movetoStartUp();
             }
@@ -98,13 +88,6 @@ public class SplashActivity extends BaseActivity implements WebserviceCallBack {
 
     private void movetoStartUp() {
 
-        /*mRunnable = new Runnable() {
-            @Override
-            public void run() {
-                moveToNextActivityWithFade(true, StartupActivity.class, null);
-            }
-        };*/
-
         mHandler.postDelayed(mRunnable, 4000);
     }
 
@@ -114,45 +97,21 @@ public class SplashActivity extends BaseActivity implements WebserviceCallBack {
         if (requestCode == LOGIN && response != null && response.getErrorcode() == 0) {
             SignInModel signInModel = ResponseParser.parseSignIn(response);
             if (signInModel != null) {
-                CacheUtility.writeCache(mWeakActivity.get(), CacheConstants.PROFILE, signInModel);
-                Bloodbank.setSignInData((SignInModel) CacheUtility.readCache(mWeakActivity.get(), CacheConstants.PROFILE));
+                CacheUtility.writeCache(getApplicationContext(), CacheConstants.PROFILE, signInModel);
+                Bloodbank.setSignInData((SignInModel) CacheUtility.readCache(getApplicationContext(), CacheConstants.PROFILE));
 
-               /* mHandler = new Handler();
-
-                Runnable mRunnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        moveToNextActivityWithFade(true, HomeActivity.class, null);
-                    }
-                };*/
-                mHandler.postDelayed(mRunnable, 2000);
+                moveToNextActivityWithFade(true, HomeActivity.class, null);
 
 
             } else {
-               /* mHandler = new Handler();
 
-                Runnable mRunnable = new Runnable() {
-                    @Override
-                    public void run() {
-                        moveToNextActivityWithFade(true, StartupActivity.class, null);
-                    }
-                };*/
-                mHandler.postDelayed(mRunnable, 2000);
+                moveToNextActivityWithFade(true, StartupActivity.class, null);
 
             }
 
-        }
-        else
-        {
-           /* mHandler = new Handler();
+        } else {
 
-            Runnable mRunnable = new Runnable() {
-                @Override
-                public void run() {
-                    moveToNextActivityWithFade(true, StartupActivity.class, null);
-                }
-            };*/
-            mHandler.postDelayed(mRunnable, 2000);
+            moveToNextActivityWithFade(true, StartupActivity.class, null);
         }
     }
 
