@@ -423,9 +423,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
         clearValidation();
         if (TextUtils.isEmpty(mEtFullName.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_firstname), RegisterFragment.this, mEtFullName);
-        } /*else if (TextUtils.isEmpty(mEtLastName.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.empty_lastname), RegisterFragment.this, mEtLastName);
-        }*/ else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
+        }  else if (TextUtils.isEmpty(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email), RegisterFragment.this, mEtEmail);
         } else if (!GeneralUtils.isValidEmail(mEtEmail.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_email_valid), RegisterFragment.this, mEtEmail);
@@ -433,11 +431,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
             showAlert(getString(R.string.app_name), getString(R.string.empty_mobile), RegisterFragment.this, mEtMobile);
         } else if (TextUtils.isEmpty(mEtPassword.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_Password), RegisterFragment.this, mEtPassword);
-        } /*else if (TextUtils.isEmpty(mEtConfirmPassword.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.confirm_password), RegisterFragment.this, mEtConfirmPassword);
-        } else if (!mEtConfirmPassword.getText().toString().trim().equals(mEtPassword.getText().toString().trim())) {
-            showAlert(getString(R.string.app_name), getString(R.string.password_do_not_match), RegisterFragment.this, mEtConfirmPassword);
-        }*/ else if (TextUtils.isEmpty(mEtMedical.getText().toString().trim())) {
+        } else if (TextUtils.isEmpty(mEtMedical.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_medical), RegisterFragment.this, mEtMedical);
         } else if (TextUtils.isEmpty(mEtAddress.getText().toString().trim())) {
             showAlert(getString(R.string.app_name), getString(R.string.empty_address), RegisterFragment.this, mEtAddress);
@@ -461,7 +455,7 @@ public class RegisterFragment extends BaseFragment implements View.OnClickListen
                         fcm_token = "";
                     }
                     if (!TextUtils.isEmpty(phoneNumber)) {
-                        WebserviceHandler.signUp(fcm_token, mEtEmail.getText().toString().trim(), mEtFullName.getText().toString().trim(), "", mEtPassword.getText().toString().trim(), phoneNumber, latitude, longitude, address, gender, blood, mEtMedical.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), RegisterFragment.this, REGISTRATION);
+                        WebserviceHandler.signUp(fcm_token, mEtEmail.getText().toString().trim(), mEtFullName.getText().toString().trim(), mEtPassword.getText().toString().trim(), phoneNumber, latitude, longitude, address, gender, blood, mEtMedical.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), RegisterFragment.this, REGISTRATION);
                     } else {
                         showAlert(getString(R.string.app_name), getString(R.string.empty_mobile));
                     }
