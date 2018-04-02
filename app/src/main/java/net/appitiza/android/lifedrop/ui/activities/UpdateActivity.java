@@ -141,6 +141,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
         mTvDone.setOnClickListener(this);
         if (Bloodbank.getSignInData() != null) {
 
+            mEtFullName.setText(Bloodbank.getSignInData().getFirstName());
             mEtFullName.setSelection(mEtFullName.getText().length());
             mEtMobile.setText(Bloodbank.getSignInData().getNumber());
             mEtEmail.setText(Bloodbank.getSignInData().getEmail());
