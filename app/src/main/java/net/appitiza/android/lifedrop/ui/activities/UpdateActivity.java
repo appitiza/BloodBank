@@ -140,10 +140,10 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
         mEtDOB.setOnClickListener(this);
         mTvDone.setOnClickListener(this);
         if (Bloodbank.getSignInData() != null) {
-
             mEtFullName.setText(Bloodbank.getSignInData().getFirstName());
             mEtFullName.setSelection(mEtFullName.getText().length());
             mEtMobile.setText(Bloodbank.getSignInData().getNumber());
+            phoneNumber = Bloodbank.getSignInData().getNumber();
             mEtEmail.setText(Bloodbank.getSignInData().getEmail());
 
             mEtLastDonated.setText(Bloodbank.getSignInData().getLastDonation());
@@ -196,7 +196,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
         };
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
+       /* if (currentUser != null) {
             phoneNumber = currentUser.getPhoneNumber();
             mEtMobile.setEnabled(false);
             mEtMobile.setFocusable(false);
@@ -206,7 +206,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
             mEtMobile.setEnabled(true);
             mEtMobile.setFocusable(true);
             mEtMobile.setClickable(true);
-        }
+        }*/
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
@@ -414,7 +414,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
                     if (!TextUtils.isEmpty(phoneNumber)) {
                         if (Bloodbank.getSignInData() != null) {
                             blood = Bloodbank.getSignInData().getBlood();
-                            WebserviceHandler.updateProfile(fcm_token, Bloodbank.getSignInData().getEmail(), mEtFullName.getText().toString().trim(), "", password, phoneNumber, latitude, longitude, address, gender, blood, mEtDOB.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), UpdateActivity.this, UPDATION);
+                            WebserviceHandler.updateProfile(fcm_token, Bloodbank.getSignInData().getEmail(), mEtFullName.getText().toString().trim(), password, phoneNumber, latitude, longitude, address, gender, blood, mEtDOB.getText().toString().trim(), mEtLastDonated.getText().toString().trim(), UpdateActivity.this, UPDATION);
 
                         }
                     } else {

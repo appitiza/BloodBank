@@ -13,14 +13,13 @@ public class WebserviceHandler {
     }
 
 
-    public static void signUp(String fcmid, String email, String firstname, String lastname, String password, String mobile, String latitude, String longitude, String address, String gender, String blood, String medical_issue, String lastdonation, final WebserviceCallBack mCallback, int requestcode) {
+    public static void signUp(String fcmid, String email, String firstname, String password, String mobile, String latitude, String longitude, String address, String gender, String blood, String medical_issue, String lastdonation, final WebserviceCallBack mCallback, int requestcode) {
 
 
         JsonObject signUpRequest = new JsonObject();
         signUpRequest.addProperty("fcmid", fcmid);
         signUpRequest.addProperty("email_id", email);
         signUpRequest.addProperty("firstname", firstname);
-        signUpRequest.addProperty("lastname", lastname);
         signUpRequest.addProperty("password", password);
         signUpRequest.addProperty("mobile", mobile);
         signUpRequest.addProperty("latitude", latitude);
@@ -93,14 +92,13 @@ public class WebserviceHandler {
         Call<BaseResponseModel> detailedResponseCall = getApiInterface().requestBlood(signInRequest);
         Webservices.getInstance().callWebService(detailedResponseCall, mCallback, requestcode);
     }
-    public static void updateProfile(String fcmid, String email, String firstname, String lastname, String password, String mobile, String latitude, String longitude, String address, String gender, String blood, String medical_issue, String lastdonation, final WebserviceCallBack mCallback, int requestcode) {
+    public static void updateProfile(String fcmid, String email, String firstname, String password, String mobile, String latitude, String longitude, String address, String gender, String blood, String medical_issue, String lastdonation, final WebserviceCallBack mCallback, int requestcode) {
 
 
         JsonObject signUpRequest = new JsonObject();
         signUpRequest.addProperty("fcmid", fcmid);
         signUpRequest.addProperty("email_id", email);
         signUpRequest.addProperty("firstname", firstname);
-        signUpRequest.addProperty("lastname", lastname);
         signUpRequest.addProperty("password", password);
         signUpRequest.addProperty("mobile", mobile);
         signUpRequest.addProperty("latitude", latitude);
