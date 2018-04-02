@@ -177,6 +177,9 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
             @Override
             public void onVerificationFailed(FirebaseException e) {
                 Log.d("TAG", "onVerificationFailed:" + e);
+                if(pd != null && pd.isShowing()) {
+                    pd.dismiss();
+                }
                 showUnexpectedError();
 
             }

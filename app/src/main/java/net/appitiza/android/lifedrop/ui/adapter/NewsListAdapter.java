@@ -44,7 +44,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.MyView
 
         holder.mTvTitle.setText(mData.getTitle());
         holder.mTvDesc.setText(mData.getDesc());
-        holder.mTvdate.setText(mData.getMdate());
+       // holder.mTvdate.setText(mData.getMdate());
         holder.mRoot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

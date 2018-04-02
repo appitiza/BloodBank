@@ -52,6 +52,7 @@
                 android:layout_gravity="right"
                 android:gravity="right"
                 android:text="@string/yes"
+                android:visibility="gone"
                 android:fontFamily="@font/helvatica"/>
         </LinearLayout>
     </LinearLayout>

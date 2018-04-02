@@ -53,11 +53,16 @@ public class RequestListAdapter extends RecyclerView.Adapter<RequestListAdapter.
         if (mData != null) {
             holder.mProgressBar.setVisibility(View.GONE);
             holder.mCardView.setVisibility(View.VISIBLE);
-            holder.mTvName.setText(mData.getFirstName() + " " + mData.getLastName());
+            holder.mTvName.setText(mData.getFirstName());
             holder.mTvBlood.setText(mData.getBlood());
             holder.mTvNumber.setText(mData.getNumber());
             if (mData.getRequiredDate() != null && !mData.getRequiredDate().equalsIgnoreCase("")) {
-                holder.mTvdate.setText(DateTimeUtils.dateDifferenceCalculation(mData.getRequiredDate(), context) + "(" + DateTimeUtils.formatDate(mData.getRequiredDate()) + ")");
+                StringBuilder datedata = new StringBuilder();
+                datedata.append(DateTimeUtils.dateDifferenceCalculation(mData.getRequiredDate(), context));
+                datedata.append("(");
+                datedata.append(mData.getRequiredDate());
+                datedata.append(")");
+                holder.mTvdate.setText(datedata);
 
             }
             setAnimation(holder.itemView, position);

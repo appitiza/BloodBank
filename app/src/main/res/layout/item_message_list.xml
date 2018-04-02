@@ -53,19 +53,14 @@
                     android:orientation="vertical"
                     android:padding="@dimen/default_semi_padding">
 
-                    <net.appitiza.android.lifedrop.Views.CustomTextview
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/default_semi_padding"
-                        android:text="@string/details"
-                        android:textStyle="bold" />
 
                     <net.appitiza.android.lifedrop.Views.CustomTextview
                         android:id="@+id/tv_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/default_semi_padding"
-                        android:text="@string/yes" />
+                        android:textStyle="bold"
+                        android:text="@string/app_name" />
 
                     <net.appitiza.android.lifedrop.Views.CustomTextview
                         android:id="@+id/tv_number"
@@ -75,7 +70,7 @@
                         android:drawablePadding="@dimen/default_semi_padding"
                         android:drawableStart="@drawable/call"
                         android:padding="@dimen/default_semi_padding"
-                        android:text="@string/yes" />
+                        android:text="@string/app_name" />
                 </LinearLayout>
 
 
