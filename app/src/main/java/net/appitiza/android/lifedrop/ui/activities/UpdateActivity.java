@@ -198,18 +198,7 @@ public class UpdateActivity extends BaseActivity implements View.OnClickListener
             }
         };
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-       /* if (currentUser != null) {
-            phoneNumber = currentUser.getPhoneNumber();
-            mEtMobile.setEnabled(false);
-            mEtMobile.setFocusable(false);
-            mEtMobile.setClickable(false);
-            mEtMobile.setText(phoneNumber);
-        } else {
-            mEtMobile.setEnabled(true);
-            mEtMobile.setFocusable(true);
-            mEtMobile.setClickable(true);
-        }*/
+
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {

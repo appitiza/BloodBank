@@ -18,5 +18,6 @@ public class Constants {
     public static final int REGISTERATION_NUMBER_FAILED_DIALOG_ID = 2;
     public static final int CONTINUE_REGISTRATION_DIALOG_ID = 3;
     public static final int NOT_MANDATORY = 2;//PERMISSION_REQUEST_CODE_INDICATION = 2;
+    public static final String MESSAGE_DETAILS = "messgae_details";//PERMISSION_REQUEST_CODE_INDICATION = 2;
 
 }

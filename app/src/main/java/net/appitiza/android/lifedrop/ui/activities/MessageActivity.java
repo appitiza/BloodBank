@@ -41,7 +41,7 @@ public class MessageActivity extends AppCompatActivity {
 
         if (getIntent() != null) {
             if (getIntent().getStringExtra("first_name") != null && getIntent().getStringExtra("last_name") != null) {
-                mTvName.setText(getIntent().getStringExtra("first_name") + " " + getIntent().getStringExtra("last_name"));
+                mTvName.setText(getIntent().getStringExtra("first_name"));
             }
             if (getIntent().getStringExtra("email_id") != null) {
                 mTvEmail.setText(getIntent().getStringExtra("email_id"));

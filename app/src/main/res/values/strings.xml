@@ -67,7 +67,7 @@
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="address">Address</string>
-    <string name="mobile">Mobile(+91XXXXXXXXXX)</string>
+    <string name="mobile">Mobile(eg: +15417543010)</string>
     <string name="last_donated">Last Donated</string>
     <string name="select_a_blood_type">"Select a Blood Type" </string>
     <string name="required_date">Required Date</string>
@@ -131,5 +131,12 @@
     <string name="empty_email_header">Email ID Missing</string>
     <string name="invalid_email_header">Invalid Email ID</string>
     <string name="empty_password">Password Missing</string>
+
+
+    <!--transition name-->
+    <string name="blood_group_transistion">bloodgroup_transition</string>
+    <string name="name_transistion">name_transition</string>
+    <string name="number_transistion">number_transition</string>
+    <string name="date_transistion">date_transition</string>
 
 </resources>

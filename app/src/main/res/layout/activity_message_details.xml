@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="1dp"
+    card_view:cardMaxElevation="2dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/default_semi_padding">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/blood"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_semi_padding">
+
+            <net.appitiza.android.lifedrop.Views.CustomTextview
+                android:id="@+id/tv_blood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/helvatica"
+                android:transitionName="@string/blood_group_transistion"
+                android:textSize="@dimen/default_large_text_size"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_semi_padding">
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding"
+                    android:text="@string/details"
+                    android:textStyle="bold" />
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding" />
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding"
+                    android:visibility="gone" />
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/call"
+                    android:drawablePadding="@dimen/default_semi_padding"
+                    android:drawableStart="@drawable/call"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_semi_padding">
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding"
+                    android:text="@string/address"
+                    android:textStyle="bold" />
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_semi_padding">
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding"
+                    android:text="@string/message"
+                    android:textStyle="bold" />
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvatica"
+                    android:padding="@dimen/default_semi_padding"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_semi_padding">
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:fontFamily="@font/helvatica"
+                    android:gravity="right|center_vertical"
+                    android:padding="@dimen/default_semi_padding"
+                    android:text="@string/requires_by"
+                    android:textStyle="bold" />
+
+                <net.appitiza.android.lifedrop.Views.CustomTextview
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:fontFamily="@font/helvatica"
+                    android:gravity="right|center_vertical"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/default_padding">
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/whats_app"
+                />
+            <ImageView
+                android:id="@+id/iv_whatsapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:src="@drawable/whats_app" />
+
+            <ImageView
+                android:id="@+id/iv_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:src="@drawable/facebook" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

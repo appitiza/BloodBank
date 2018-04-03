@@ -43,6 +43,9 @@
                 android:hint="@string/address"
                 android:imeOptions="actionSend"
                 android:inputType="none"
+                android:longClickable="false"
+                android:lines="3"
+                android:maxLines="4"
                 android:padding="@dimen/default_semi_padding"
                 android:textColorHint="@color/et_hint_color" />
         </android.support.design.widget.TextInputLayout>

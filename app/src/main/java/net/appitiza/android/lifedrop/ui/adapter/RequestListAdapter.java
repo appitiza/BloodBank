@@ -1,12 +1,15 @@
 package net.appitiza.android.lifedrop.ui.adapter;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +23,10 @@ import android.widget.ProgressBar;
 
 import net.appitiza.android.lifedrop.R;
 import net.appitiza.android.lifedrop.Views.CustomTextview;
+import net.appitiza.android.lifedrop.constants.Constants;
 import net.appitiza.android.lifedrop.model.Requestlist;
+import net.appitiza.android.lifedrop.ui.activities.MessageActivity;
+import net.appitiza.android.lifedrop.ui.activities.MessageDetailsActivity;
 import net.appitiza.android.lifedrop.utils.DateTimeUtils;
 
 import java.util.ArrayList;
@@ -75,7 +81,30 @@ public class RequestListAdapter extends RecyclerView.Adapter<RequestListAdapter.
             @Override
             public void onClick(View view) {
                 if (mData != null) {
-                    showOverDialog(mData);
+                    Intent intent = new Intent(context, MessageDetailsActivity.class);
+                    intent.putExtra("title",mData.getBlood());
+                    intent.putExtra("email_id",mData.getEmailId());
+                    intent.putExtra("blood",mData.getBlood());
+                    intent.putExtra("address",mData.getAddress());
+                    intent.putExtra("lat",mData.getLat());
+                    intent.putExtra("lon",mData.getLon());
+                    intent.putExtra("required_date",mData.getRequiredDate());
+                    intent.putExtra("first_name",mData.getFirstName());
+                    intent.putExtra("last_name",mData.getLastName());
+                    intent.putExtra("message",mData.getMessage());
+                    intent.putExtra("number",mData.getNumber());
+
+                    Pair<View, String> p1 = Pair.create((View)(holder.mTvBlood), context.getString(R.string.blood_group_transistion));
+                    Pair<View, String> p2 = Pair.create((View)(holder.mTvName), context.getString(R.string.blood_group_transistion));
+                    Pair<View, String> p3 = Pair.create((View)(holder.mTvNumber), context.getString(R.string.blood_group_transistion));
+                    Pair<View, String> p4 = Pair.create((View)(holder.mTvNumber), context.getString(R.string.blood_group_transistion));
+                  /*  ActivityOptionsCompat options = ActivityOptionsCompat.
+                            makeSceneTransitionAnimation((Activity) context, p1, p2, p3,p4);*/
+
+                   /* ActivityOptionsCompat options = ActivityOptionsCompat.
+                            makeSceneTransitionAnimation((Activity) context, (View)(holder.mTvBlood), context.getString(R.string.blood_group_transistion));
+           */
+                 //  context.startActivity(intent, options.toBundle());
                 }
             }
         });
@@ -161,6 +190,7 @@ public class RequestListAdapter extends RecyclerView.Adapter<RequestListAdapter.
         });
 
         mDialogRespond.show();
+
     }
 
     @Override

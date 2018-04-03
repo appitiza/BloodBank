@@ -38,6 +38,7 @@
                 android:padding="@dimen/default_semi_padding"
                 android:textAllCaps="true"
                 android:textSize="@dimen/default_large_text_size"
+                android:transitionName="@string/blood_group_transistion"
                 android:textStyle="bold" />
 
             <LinearLayout
@@ -60,6 +61,7 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/default_semi_padding"
                         android:textStyle="bold"
+                        android:transitionName="@string/name_transistion"
                         android:text="@string/app_name" />
 
                     <net.appitiza.android.lifedrop.Views.CustomTextview
@@ -69,6 +71,7 @@
                         android:drawableLeft="@drawable/call"
                         android:drawablePadding="@dimen/default_semi_padding"
                         android:drawableStart="@drawable/call"
+                        android:transitionName="@string/number_transistion"
                         android:padding="@dimen/default_semi_padding"
                         android:text="@string/app_name" />
                 </LinearLayout>
@@ -97,6 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="right|center_vertical"
                         android:gravity="right|center_vertical"
+                        android:transitionName="@string/date_transistion"
                         android:textStyle="italic" />
                 </LinearLayout>
 

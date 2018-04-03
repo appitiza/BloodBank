@@ -24,7 +24,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
 
-        // @string/app_name(developer): Handle FCM messages here.
+        // (developer): Handle FCM messages here.
         if (remoteMessage.getData().size() > 0) {
             System.out.println("data: " + remoteMessage.getData());
             Map<String, String> data = remoteMessage.getData();

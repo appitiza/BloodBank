@@ -12,13 +12,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".app.Bloodbank"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/MainMaterialTheme.Base.home"
-        android:name=".app.Bloodbank">
+        android:theme="@style/MainMaterialTheme.Base.home">
         <activity android:name=".ui.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +45,8 @@
             android:name=".ui.activities.ResetPasswordActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize|adjustPan" />
 
-        <service android:name=".services.MyFirebaseMessagingService"
+        <service
+            android:name=".services.MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="true"
             android:stopWithTask="false">
@@ -58,7 +59,8 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".ui.activities.LocationUpdatesService"
+        <service
+            android:name=".ui.activities.LocationUpdatesService"
             android:enabled="true"
             android:exported="true" />
         <!--
@@ -87,6 +89,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".ui.activities.MessageDetailsActivity"></activity>
     </application>
 
 </manifest>
