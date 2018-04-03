@@ -3,13 +3,12 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:transitionName="@string/message_open_transistion"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="1dp"
-    card_view:cardMaxElevation="2dp">
-
-
-
+    card_view:cardMaxElevation="2dp"
+    android:background="@drawable/common_bg">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,28 +44,16 @@
                 android:orientation="vertical"
                 android:padding="@dimen/default_semi_padding">
 
-                <net.appitiza.android.lifedrop.Views.CustomTextview
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/helvatica"
-                    android:padding="@dimen/default_semi_padding"
-                    android:text="@string/details"
-                    android:textStyle="bold" />
 
                 <net.appitiza.android.lifedrop.Views.CustomTextview
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/helvatica"
-                    android:padding="@dimen/default_semi_padding" />
-
-                <net.appitiza.android.lifedrop.Views.CustomTextview
-                    android:id="@+id/tv_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/helvatica"
+                    android:transitionName="@string/name_transistion"
                     android:padding="@dimen/default_semi_padding"
-                    android:visibility="gone" />
+                    android:textStyle="bold"/>
+
 
                 <net.appitiza.android.lifedrop.Views.CustomTextview
                     android:id="@+id/tv_number"
@@ -76,6 +63,7 @@
                     android:drawablePadding="@dimen/default_semi_padding"
                     android:drawableStart="@drawable/call"
                     android:fontFamily="@font/helvatica"
+                    android:transitionName="@string/number_transistion"
                     android:padding="@dimen/default_semi_padding" />
             </LinearLayout>
 
@@ -150,6 +138,7 @@
                     android:layout_gravity="right|center_vertical"
                     android:fontFamily="@font/helvatica"
                     android:gravity="right|center_vertical"
+                    android:transitionName="@string/date_transistion"
                     android:textStyle="italic" />
             </LinearLayout>
 
@@ -167,7 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/whats_app"
+                android:src="@drawable/share"
                 />
             <ImageView
                 android:id="@+id/iv_whatsapp"

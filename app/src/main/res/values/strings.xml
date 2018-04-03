@@ -134,6 +134,7 @@
 
 
     <!--transition name-->
+    <string name="message_open_transistion">message_open_transition</string>
     <string name="blood_group_transistion">bloodgroup_transition</string>
     <string name="name_transistion">name_transition</string>
     <string name="number_transistion">number_transition</string>

@@ -227,7 +227,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
         clearSelection();
         mTvRequest.setTypeface(null, Typeface.BOLD);
         mTvRequest.setTextColor(ContextCompat.getColor(HomeActivity.this, R.color.colorPrimary));
-        mIvRequest.setImageResource(R.drawable.coins_pressed);
+        mIvRequest.setImageResource(R.drawable.request_pressed);
         FragmentManager mFragManager = getSupportFragmentManager();
         Fragment fragment = mFragManager.findFragmentByTag(FragmentTags.REQUEST_FRAGMENT_TAG);
         if (fragment == null) {

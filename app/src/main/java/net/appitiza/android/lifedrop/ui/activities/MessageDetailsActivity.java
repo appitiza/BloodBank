@@ -16,7 +16,6 @@ public class MessageDetailsActivity extends AppCompatActivity {
 
     ImageView mIvProfile;
     CustomTextview mTvName;
-    CustomTextview mTvEmail;
     CustomTextview mTvNumber;
     CustomTextview mTvBlood;
     CustomTextview mTvAddress;
@@ -35,7 +34,6 @@ public class MessageDetailsActivity extends AppCompatActivity {
     private void initialize() {
         mIvProfile = findViewById(R.id.mIvProfile);
         mTvName = findViewById(R.id.tv_name);
-        mTvEmail = findViewById(R.id.tv_email);
         mTvNumber = findViewById(R.id.tv_number);
         mTvBlood = findViewById(R.id.tv_blood);
         mTvAddress = findViewById(R.id.tv_address);
@@ -48,9 +46,6 @@ public class MessageDetailsActivity extends AppCompatActivity {
         if (getIntent() != null) {
             if (getIntent().getStringExtra("first_name") != null) {
                 mTvName.setText(getIntent().getStringExtra("first_name"));
-            }
-            if (getIntent().getStringExtra("email_id") != null) {
-                mTvEmail.setText(getIntent().getStringExtra("email_id"));
             }
             if (getIntent().getStringExtra("number") != null) {
                 mTvNumber.setText(getIntent().getStringExtra("number"));
@@ -80,7 +75,7 @@ public class MessageDetailsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mTvNumber.setOnClickListener(new View.OnClickListener() {
+        mIvShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 share("Message From Blood", getIntent().getStringExtra("first_name") + " requires " + getIntent().getStringExtra("blood") + "  blood by " + DateTimeUtils.formatDate(getIntent().getStringExtra("required_date")));
